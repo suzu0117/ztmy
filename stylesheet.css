@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 4%;
+}
+
+h1 {
+    width: 25vw;
+}
+
+.pcmenu_cont {
+    display: flex;
+}
+
+.pcmenu_cont li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+footer {
+    padding:30px;
+    background-color: black;
+    text-align: center;
+}
+
+footer small {
+    color: white;
+}
+
+.top_img {
+    width: 100%;
+    height: 95vh;
+}
+
+.top_img img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.main_cont {
+    padding: 4%;
+}
+
+.large_img_cont{
+    display: flex;
+}
+.large_img_cont div {
+    text-align: center;
+    width: calc(100%/3);
+}
+.large_img_cont div p {
+    text-align: center;
+}
+
+.large_img_cont div img {
+    padding:2%;
+    width:96%;
+}
+.small_img_cont {
+    padding-top: 2%;
+    display: flex;
+}
+
+.small_img_cont div {
+    text-align: center;
+    width: calc(100%/6);
+}
+
+.small_img_cont div img {
+    padding:4%;
+    width: 92%;
+}
+
+.contact {
+    margin-bottom: 3%;
+}
+
+form {
+    margin: auto;
+    width:60%;
+}
+
+form p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form label,
+form label input,
+form label textarea {
+    display: block;
+    width: 100%;
+}
+
+input,
+textarea,
+input:focus
+textarea:focus {
+    outline: none;
+    background-color: whitesmoke;
+    border: none;
+}
+
+
+#name,
+#e-mail {
+    width: 100%;
+    padding:10px;
+}
+
+#massage {
+    height: 300px;
+    padding:10px;
+}
+
+#btn {
+    display: block;
+    margin:0 auto;
+    background-color: black;
+    color: white;
+    padding:5px 20px;
+}
+
+.link_top {
+    display:block;
+    text-align: right;
+    padding:0 4%;
+}
+
+@media screen and (min-width:1025px) {
+    .burger {
+        display:none;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+    .pcmenu {
+        display: none;
+    }
+
+    header {
+        position:relative;
+        display: flex;
+        width:100%;
+        justify-content: center;
+        padding:20px 0;
+    }
+
+    h1 {
+        width:50vw;
+
+    }
+
+    .burger {
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:100;
+    }
+
+    .burger_input {
+        display: none;
+    }
+    
+    .burger_input:checked ~ .burger_inner {
+        transition: 0.2s;
+        background-color: #8027d0;
+        padding-right: 200px;
+        height:100vh;
+    }
+    .burger_icon { 
+        display:flex;
+        height:60px;
+        width:60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor:pointer;
+    }
+    
+    .burger_icon span,
+    .burger_icon span::before,
+    .burger_icon span::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width:25px;
+        border-radius: 3px;
+        background: black;
+        position: absolute;
+    }
+
+    .burger_icon span::before {
+        bottom:8px;
+    }
+
+    .burger_icon span::after {
+        top:8px;
+    }
+
+    .spmenu {
+        display:none;
+        margin-top:20px;
+    }
+
+    .burger_input:checked ~ .burger_inner .burger_icon span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .burger_input:checked ~ .burger_inner .burger_icon span::before {
+       bottom:0;
+       transform: rotate(-45deg);
+       background-color: white;
+    }
+
+    .burger_input:checked ~ .burger_inner .burger_icon span::after {
+        top:0;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+
+    .burger_input:checked ~ .burger_inner .spmenu {
+        display: block;
+    }
+
+    .spmenu .spmenu_cont {
+        margin-left: 22px;
+    }
+
+    .spmenu_cont li {
+        margin-top: 20px;
+    }
+
+    .spmenu_cont li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .large_img_cont {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .large_img_cont div {
+        text-align: center;
+        width: 100%
+    }
+
+    .small_img_cont {
+        padding-top: 2%;
+        flex-wrap: wrap;
+    }
+    
+    .small_img_cont div {
+        text-align: center;
+        width: 50%;
+    }
+
+    form {
+        width:80%;
+    }
+
+}
