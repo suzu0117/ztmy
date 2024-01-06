@@ -219,17 +219,20 @@ textarea:focus {
 
     .burger_input:checked ~ .burger_inner .burger_icon span {
         background-color: rgba(255, 255, 255, 0);
+        transition: 0.2s;
     }
 
     .burger_input:checked ~ .burger_inner .burger_icon span::before {
        bottom:0;
        transform: rotate(-45deg);
+       transition: 0.2s;
        background-color: white;
     }
 
     .burger_input:checked ~ .burger_inner .burger_icon span::after {
         top:0;
         transform: rotate(45deg);
+        transition: 0.2s;
         background-color: white;
     }
 
